@@ -1,0 +1,9 @@
+<div class="product-container">
+  <div class="product-box" *ngFor="let product of products">
+    <h3>{{ product.name }}</h3>
+    <p>₱{{ product.price | number }}</p>
+    <button routerLink="/details">View Details</button>
+  </div>
+</div>
+
+<button (click)="backToHome()">Back to Home</button>
