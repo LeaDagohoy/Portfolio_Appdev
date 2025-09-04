@@ -1,0 +1,35 @@
+<div class="product-details-container" *ngIf="product">
+  <div class="product-card">
+    <h2>PRODUCT DETAILS</h2>
+
+    <div class="detail-row">
+      <span class="label">Name:</span>
+      <span class="value">{{ product.name }}</span>
+    </div>
+
+    <div class="detail-row">
+      <span class="label">Price:</span>
+      <span class="value">₱{{ product.price | number }}</span>
+    </div>
+
+    <div class="detail-row">
+      <span class="label">Location:</span>
+      <span class="value">{{ product.location }}</span>
+    </div>
+
+    <div class="detail-row">
+      <span class="label">Details:</span>
+      <span class="value">{{ product.details }}</span>
+    </div>
+
+    <div class="button-container">
+      <button routerLink="/products">Go Back</button>
+    </div>
+  </div>
+</div>
+
+<!-- Optional: handle product not found -->
+<div class="not-found" *ngIf="!product">
+  <p>Product not found.</p>
+  <button routerLink="/products">Back to Products</button>
+</div>
